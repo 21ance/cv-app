@@ -1,0 +1,10 @@
+.preview-cv{
+  display: flex;
+  flex-direction: column;
+  background-color: $container-color;
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 0 40px 1px rgb(0 0 0 / 50%);
+  width: 40vw;
+  justify-self: center;
+}
