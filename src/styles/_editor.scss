@@ -1,7 +1,8 @@
 .editor-container{
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: fit-content;
+  gap: 20px;
   background-color: $container-color;
   padding: 30px;
   border-radius: 4px;
@@ -9,14 +10,17 @@
   width: 40vw;
   justify-self: center;
 
-  .general-info {
+  .info {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: inherit;
 
     input, textarea{
       padding: 10px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
     }
   }
 }

@@ -1,6 +1,6 @@
 const GeneralInfo = (props) => {
   return (
-    <div className="general-info">
+    <div className="info">
       <h2>Personal Info</h2>
       <input
         type="text"
