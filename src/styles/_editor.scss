@@ -18,9 +18,14 @@
     input, textarea{
       padding: 10px;
     }
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
 
-    h2 {
-      font-size: 1.3rem;
-    }
+  .component-header {
+    display: flex;
+    justify-content: space-between;
   }
 }
