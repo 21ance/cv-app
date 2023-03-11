@@ -19,7 +19,7 @@ const Education = (props) => {
     }
   }
   function handleSubmit(e) {
-    if (props.educationForm.id === null) {
+    if (props.educationForm.id === "") {
       // save previous state and add new education object
       const newEducation = [
         ...props.education,
@@ -51,7 +51,7 @@ const Education = (props) => {
       degree: "",
       startDate: "",
       endDate: "",
-      id: null,
+      id: "",
     });
 
     e.preventDefault();
@@ -110,10 +110,9 @@ const Education = (props) => {
         />
         <input type="checkbox" onChange={(e) => handleCheckbox()} />
       </div>
-      {console.log(props.educationForm)}
-
       <button>
         {props.educationForm.id === "" ? "Add Education" : "Save Edit"}
+        {console.log(props.educationForm)}
       </button>
     </form>
   );
