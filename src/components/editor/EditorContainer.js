@@ -24,12 +24,16 @@ const EditorContainer = (props) => {
             id={edu.id}
             education={props.education}
             setEducation={props.setEducation}
+            educationForm={props.educationForm}
+            setEducationForm={props.setEducationForm}
           />
         );
       })}
       <EducationForm
         education={props.education}
         setEducation={props.setEducation}
+        educationForm={props.educationForm}
+        setEducationForm={props.setEducationForm}
       />
     </div>
   );

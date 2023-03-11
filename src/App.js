@@ -10,6 +10,13 @@ const App = () => {
   const [desc, setDesc] = useState("");
   // sample template
   // to remove
+  const [educationForm, setEducationForm] = useState({
+    schoolName: "",
+    degree: "",
+    startDate: "",
+    endDate: "",
+    id: 1,
+  });
   const [education, setEducation] = useState([
     {
       schoolName: "College",
@@ -37,6 +44,8 @@ const App = () => {
         setDesc={setDesc}
         education={education}
         setEducation={setEducation}
+        educationForm={educationForm}
+        setEducationForm={setEducationForm}
       />
       <Preview
         name={name}

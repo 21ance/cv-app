@@ -1,8 +1,15 @@
 const EducationEdit = (props) => {
-  const handleRemove = (id) => {
+  function handleRemove(id) {
     const newEducation = props.education.filter((edu) => edu.id !== id);
     props.setEducation(newEducation);
-  };
+  }
+
+  function handleEdit(id) {
+    const newEducationForm = props.education
+      .filter((edu) => edu.id === id)
+      .pop();
+    props.setEducationForm(newEducationForm);
+  }
 
   return (
     <div className="education-edit">
@@ -10,7 +17,7 @@ const EducationEdit = (props) => {
       <span>
         {props.startDate} - {props.endDate}
       </span>
-      <button>Edit</button>
+      <button onClick={() => handleEdit(props.id)}>Edit</button>
       <button onClick={() => handleRemove(props.id)}>Remove</button>
     </div>
   );
