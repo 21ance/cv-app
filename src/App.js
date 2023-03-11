@@ -15,22 +15,23 @@ const App = () => {
     degree: "",
     startDate: "",
     endDate: "",
-    id: 1,
+    id: "",
   });
+
   const [education, setEducation] = useState([
-    {
-      schoolName: "College",
-      degree: "Accounting",
-      startDate: "2020-08-05",
-      endDate: "Present",
-      id: 1,
-    },
     {
       schoolName: "High School",
       degree: "STEM",
       startDate: "2016-08-01",
       endDate: "2020-05-21",
       id: 0,
+    },
+    {
+      schoolName: "College",
+      degree: "Accounting",
+      startDate: "2020-08-05",
+      endDate: "2020-05-21",
+      id: 1,
     },
   ]);
 

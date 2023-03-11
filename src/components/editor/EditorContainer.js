@@ -14,21 +14,23 @@ const EditorContainer = (props) => {
         setDesc={props.setDesc}
       />
       <ComponentHeader title="Education" />
-      {props.education.map((edu, key) => {
-        return (
-          <EducationEdit
-            key={edu.id}
-            schoolName={edu.schoolName}
-            startDate={edu.startDate}
-            endDate={edu.endDate}
-            id={edu.id}
-            education={props.education}
-            setEducation={props.setEducation}
-            educationForm={props.educationForm}
-            setEducationForm={props.setEducationForm}
-          />
-        );
-      })}
+      {props.education
+        .map((edu, key) => {
+          return (
+            <EducationEdit
+              key={edu.id}
+              schoolName={edu.schoolName}
+              startDate={edu.startDate}
+              endDate={edu.endDate}
+              id={edu.id}
+              education={props.education}
+              setEducation={props.setEducation}
+              educationForm={props.educationForm}
+              setEducationForm={props.setEducationForm}
+            />
+          );
+        })
+        .reverse()}
       <EducationForm
         education={props.education}
         setEducation={props.setEducation}

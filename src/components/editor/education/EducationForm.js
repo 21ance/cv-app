@@ -19,21 +19,43 @@ const Education = (props) => {
     }
   }
   function handleSubmit(e) {
-    const newEducation = [
-      {
+    if (props.educationForm.id === null) {
+      // save previous state and add new education object
+      const newEducation = [
+        ...props.education,
+        {
+          schoolName: props.educationForm.schoolName,
+          degree: props.educationForm.degree,
+          startDate: props.educationForm.startDate,
+          endDate: props.educationForm.endDate,
+          id: props.education.length,
+        },
+      ];
+      props.setEducation(newEducation);
+    } else {
+      // modify index object value using its ID
+      const newEducation = [...props.education];
+      newEducation[props.educationForm.id] = {
         schoolName: props.educationForm.schoolName,
         degree: props.educationForm.degree,
         startDate: props.educationForm.startDate,
         endDate: props.educationForm.endDate,
-        id: props.education.length + 1,
-      },
-      ...props.education,
-    ];
-    props.setEducation(newEducation);
+        id: props.educationForm.id,
+      };
+      props.setEducation(newEducation);
+    }
+
+    // empty the form after save/edit
+    props.setEducationForm({
+      schoolName: "",
+      degree: "",
+      startDate: "",
+      endDate: "",
+      id: null,
+    });
 
     e.preventDefault();
-    e.target.reset();
-    setPresent(false);
+    // setPresent(false);
   }
 
   return (
@@ -88,7 +110,11 @@ const Education = (props) => {
         />
         <input type="checkbox" onChange={(e) => handleCheckbox()} />
       </div>
-      <button>Save</button>
+      {console.log(props.educationForm)}
+
+      <button>
+        {props.educationForm.id === "" ? "Add Education" : "Save Edit"}
+      </button>
     </form>
   );
 };
