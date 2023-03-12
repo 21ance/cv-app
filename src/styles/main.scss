@@ -23,3 +23,11 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
+
+button {
+  border: 0
+}
+
+ion-icon {
+  pointer-events: none;
+}

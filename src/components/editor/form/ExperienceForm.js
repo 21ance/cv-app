@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ActionButtons from "./ActionButtons";
 
 const ExperienceForm = (props) => {
   const [present, setPresent] = useState(false);
@@ -122,9 +123,11 @@ const ExperienceForm = (props) => {
         />
         <input type="checkbox" onChange={(e) => handleCheckbox()} />
       </div>
-      <button>
-        {props.experienceForm.id === "" ? "Add Experience" : "Save Edit"}
-      </button>
+      <ActionButtons
+        form={props.experienceForm}
+        setForm={props.setExperienceForm}
+        title="Add Experience"
+      />
     </form>
   );
 };

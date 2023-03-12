@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ActionButtons from "./ActionButtons";
 
 const Education = (props) => {
   const [present, setPresent] = useState(false);
@@ -46,7 +47,12 @@ const Education = (props) => {
       props.setEducation(newEducation);
     }
 
-    // empty the form after save/edit
+    resetForm();
+    e.preventDefault();
+    // setPresent(false);
+  }
+
+  function resetForm() {
     props.setEducationForm({
       schoolName: "",
       degree: "",
@@ -54,9 +60,6 @@ const Education = (props) => {
       endDate: "",
       id: "",
     });
-
-    e.preventDefault();
-    // setPresent(false);
   }
 
   return (
@@ -111,10 +114,11 @@ const Education = (props) => {
         />
         <input type="checkbox" onChange={(e) => handleCheckbox()} />
       </div>
-      <button>
-        {props.educationForm.id === "" ? "Add Education" : "Save Edit"}
-        {/* {console.log(props.educationForm)} */}
-      </button>
+      <ActionButtons
+        form={props.educationForm}
+        setForm={props.setEducationForm}
+        title="Add Education"
+      />
     </form>
   );
 };

@@ -1,8 +1,10 @@
+@import './variables';
+
 .editor-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   background-color: $container-color;
   padding: 30px;
   border-radius: 4px;
@@ -25,7 +27,66 @@
   }
 
   .component-header {
+    margin-top: 25px;
+  }
+
+  .preview-action {
+    display: grid;
+    grid-template-columns: auto 1.5rem 1.5rem;
+
+    h3{
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .edit {
+      grid-row: 1 / -1;
+      grid-column: 2 / 3;
+    }
+
+    .remove {
+      grid-row: 1 / -1;
+      grid-column: 3 / 4;
+    }
+
+    .edit, .remove {
+      justify-self: end;
+    }
+
+    button { 
+      width: fit-content;
+      background-color: transparent;
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    button:hover{
+      scale: 1.2;
+      transition: $transition-time;
+    }
+  }
+
+  .action-buttons{
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+
+    .button-submit{
+      background-color: $save-button;
+    }
+
+    .button-cancel{
+      background-color: $cancel-button;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 5px 10px;
+    }
+
+    button:hover{
+      transition: $transition-time;
+      filter: brightness(85%);
+    }
   }
 }

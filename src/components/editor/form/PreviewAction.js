@@ -11,13 +11,17 @@ const PreviewAction = (props) => {
   }
 
   return (
-    <div className="edit">
+    <div className="preview-action">
       <h3>{props.name}</h3>
       <span>
         {props.startDate} - {props.endDate}
       </span>
-      <button onClick={() => handleEdit(props.id)}>Edit</button>
-      <button onClick={() => handleRemove(props.id)}>Remove</button>
+      <button className="edit" onClick={() => handleEdit(props.id)}>
+        <ion-icon name="create-outline"></ion-icon>
+      </button>
+      <button className="remove" onClick={() => handleRemove(props.id)}>
+        <ion-icon name="trash-outline"></ion-icon>
+      </button>
     </div>
   );
 };
