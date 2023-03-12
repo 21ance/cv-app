@@ -3,22 +3,36 @@ const GeneralInfo = (props) => {
     <div className="info">
       <input
         type="text"
-        onChange={(e) => props.setName(e.target.value)}
+        onChange={(e) =>
+          props.setPersonalInfo({ ...props.personalInfo, name: e.target.value })
+        }
         placeholder="Name"
       />
       <input
         type="email"
-        onChange={(e) => props.setEmail(e.target.value)}
+        onChange={(e) =>
+          props.setPersonalInfo({
+            ...props.personalInfo,
+            email: e.target.value,
+          })
+        }
         placeholder="Email"
       />
       <input
         type="text"
         placeholder="Phone Number"
-        onChange={(e) => props.setPhone(e.target.value)}
+        onChange={(e) =>
+          props.setPersonalInfo({
+            ...props.personalInfo,
+            phone: e.target.value,
+          })
+        }
       />
       <textarea
         placeholder="Description"
-        onChange={(e) => props.setDesc(e.target.value)}
+        onChange={(e) =>
+          props.setPersonalInfo({ ...props.personalInfo, desc: e.target.value })
+        }
       />
     </div>
   );

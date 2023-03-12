@@ -4,12 +4,13 @@ import EditorContainer from "./components/editor/EditorContainer";
 import Preview from "./components/preview/Preview";
 
 const App = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [desc, setDesc] = useState("");
-  // sample template
-  // to remove
+  const [personalInfo, setPersonalInfo] = useState({
+    name: "Hello Doge",
+    email: "helloworld@doge.com",
+    phone: "022-0222-241412",
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut repudiandae cumque, facilis nihil, blanditiis numquam fuga fugiat veniam saepe mollitia aut voluptates magni eum autem consequuntur iste nobis officia enim?",
+  });
+
   const [educationForm, setEducationForm] = useState({
     schoolName: "",
     degree: "",
@@ -19,19 +20,19 @@ const App = () => {
   });
 
   const [education, setEducation] = useState([
-    // {
-    //   schoolName: "High School",
-    //   degree: "STEM",
-    //   startDate: "2016-08-01",
-    //   endDate: "2020-05-21",
-    //   id: 0,
-    // },
+    {
+      schoolName: "High School",
+      degree: "STEM",
+      startDate: "2016-08-01",
+      endDate: "2020-05-21",
+      id: 0,
+    },
     {
       schoolName: "College",
       degree: "Accounting",
       startDate: "2020-08",
       endDate: "2022-05",
-      id: 0,
+      id: 1,
     },
   ]);
 
@@ -49,10 +50,20 @@ const App = () => {
     {
       companyName: "Company A",
       position: "Web Developer",
-      description: "I do stuff...",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus repudiandae quasi, necessitatibus libero incidunt dolor aut pariatur ipsa ut quia quibusdam iste corporis voluptates ducimus accusantium voluptatem? Placeat, sapiente.",
       startDate: "2023-01",
       endDate: "Present",
       id: 0,
+    },
+    {
+      companyName: "Company A",
+      position: "Web Developer",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus repudiandae quasi, necessitatibus libero incidunt dolor aut pariatur ipsa ut quia quibusdam iste corporis voluptates ducimus accusantium voluptatem? Placeat, sapiente.",
+      startDate: "2023-01",
+      endDate: "Present",
+      id: 1,
     },
   ]);
 
@@ -60,10 +71,8 @@ const App = () => {
     <div className="app">
       <Header />
       <EditorContainer
-        setName={setName}
-        setEmail={setEmail}
-        setPhone={setPhone}
-        setDesc={setDesc}
+        personalInfo={personalInfo}
+        setPersonalInfo={setPersonalInfo}
         education={education}
         setEducation={setEducation}
         educationForm={educationForm}
@@ -74,11 +83,9 @@ const App = () => {
         setExperienceForm={setExperienceForm}
       />
       <Preview
-        name={name}
-        email={email}
-        phone={phone}
-        desc={desc}
+        personalInfo={personalInfo}
         education={education}
+        experience={experience}
       />
     </div>
   );

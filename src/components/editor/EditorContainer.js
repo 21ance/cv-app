@@ -9,33 +9,8 @@ const EditorContainer = (props) => {
     <div className="editor-container">
       <FormSectionHeader title="Personal Information" />
       <GeneralInfo
-        setName={props.setName}
-        setEmail={props.setEmail}
-        setPhone={props.setPhone}
-        setDesc={props.setDesc}
-      />
-      <FormSectionHeader title="Education" />
-      {props.education
-        .map((edu, key) => {
-          return (
-            <PreviewAction
-              key={edu.id}
-              name={edu.schoolName}
-              startDate={edu.startDate}
-              endDate={edu.endDate}
-              id={edu.id}
-              items={props.education}
-              setItems={props.setEducation}
-              setForm={props.setEducationForm}
-            />
-          );
-        })
-        .reverse()}
-      <EducationForm
-        education={props.education}
-        setEducation={props.setEducation}
-        educationForm={props.educationForm}
-        setEducationForm={props.setEducationForm}
+        personalInfo={props.personalInfo}
+        setPersonalInfo={props.setPersonalInfo}
       />
       <FormSectionHeader title="Experience" />
       {props.experience
@@ -59,6 +34,29 @@ const EditorContainer = (props) => {
         setExperience={props.setExperience}
         experienceForm={props.experienceForm}
         setExperienceForm={props.setExperienceForm}
+      />
+      <FormSectionHeader title="Education" />
+      {props.education
+        .map((edu, key) => {
+          return (
+            <PreviewAction
+              key={edu.id}
+              name={edu.schoolName}
+              startDate={edu.startDate}
+              endDate={edu.endDate}
+              id={edu.id}
+              items={props.education}
+              setItems={props.setEducation}
+              setForm={props.setEducationForm}
+            />
+          );
+        })
+        .reverse()}
+      <EducationForm
+        education={props.education}
+        setEducation={props.setEducation}
+        educationForm={props.educationForm}
+        setEducationForm={props.setEducationForm}
       />
     </div>
   );
