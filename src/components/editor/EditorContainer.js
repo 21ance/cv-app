@@ -1,20 +1,20 @@
-import GeneralInfo from "./GeneralInfo";
-import EducationForm from "./education/EducationForm";
-import ComponentHeader from "./ComponentHeader";
-import ExperienceForm from "./experience/ExperienceForm";
+import GeneralInfo from "./form/GeneralInfo";
+import FormSectionHeader from "./form/FormSectionHeader";
+import EducationForm from "./form/EducationForm";
+import ExperienceForm from "./form/ExperienceForm";
 import PreviewAction from "./form/PreviewAction";
 
 const EditorContainer = (props) => {
   return (
     <div className="editor-container">
-      <ComponentHeader title="Personal Information" />
+      <FormSectionHeader title="Personal Information" />
       <GeneralInfo
         setName={props.setName}
         setEmail={props.setEmail}
         setPhone={props.setPhone}
         setDesc={props.setDesc}
       />
-      <ComponentHeader title="Education" />
+      <FormSectionHeader title="Education" />
       {props.education
         .map((edu, key) => {
           return (
@@ -37,7 +37,7 @@ const EditorContainer = (props) => {
         educationForm={props.educationForm}
         setEducationForm={props.setEducationForm}
       />
-      <ComponentHeader title="Experience" />
+      <FormSectionHeader title="Experience" />
       {props.experience
         .map((edu, key) => {
           return (

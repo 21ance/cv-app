@@ -17,7 +17,6 @@ const GeneralInfo = (props) => {
         onChange={(e) => props.setPhone(e.target.value)}
       />
       <textarea
-        rows={4}
         placeholder="Description"
         onChange={(e) => props.setDesc(e.target.value)}
       />
