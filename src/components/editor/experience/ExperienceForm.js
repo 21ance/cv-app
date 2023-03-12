@@ -35,6 +35,17 @@ const ExperienceForm = (props) => {
         },
       ];
       props.setExperience(newExperience);
+    } else {
+      const newExperience = [...props.experience];
+      newExperience[props.experienceForm.id] = {
+        companyName: props.experienceForm.companyName,
+        position: props.experienceForm.position,
+        description: props.experienceForm.description,
+        startDate: props.experienceForm.startDate,
+        endDate: props.experienceForm.endDate,
+        id: props.experienceForm.id,
+      };
+      props.setExperience(newExperience);
     }
 
     props.setExperienceForm({

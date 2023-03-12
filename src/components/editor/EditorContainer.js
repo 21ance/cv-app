@@ -1,9 +1,8 @@
 import GeneralInfo from "./GeneralInfo";
 import EducationForm from "./education/EducationForm";
-import EducationEdit from "./education/EducationEdit";
 import ComponentHeader from "./ComponentHeader";
 import ExperienceForm from "./experience/ExperienceForm";
-import ExperienceEdit from "./experience/ExperienceEdit";
+import PreviewAction from "./form/PreviewAction";
 
 const EditorContainer = (props) => {
   return (
@@ -19,16 +18,15 @@ const EditorContainer = (props) => {
       {props.education
         .map((edu, key) => {
           return (
-            <EducationEdit
+            <PreviewAction
               key={edu.id}
-              schoolName={edu.schoolName}
+              name={edu.schoolName}
               startDate={edu.startDate}
               endDate={edu.endDate}
               id={edu.id}
-              education={props.education}
-              setEducation={props.setEducation}
-              educationForm={props.educationForm}
-              setEducationForm={props.setEducationForm}
+              items={props.education}
+              setItems={props.setEducation}
+              setForm={props.setEducationForm}
             />
           );
         })
@@ -43,18 +41,15 @@ const EditorContainer = (props) => {
       {props.experience
         .map((edu, key) => {
           return (
-            <ExperienceEdit
+            <PreviewAction
               key={edu.id}
-              companyName={edu.companyName}
-              position={edu.position}
-              description={edu.description}
+              name={edu.companyName}
               startDate={edu.startDate}
               endDate={edu.endDate}
               id={edu.id}
-              experience={props.experience}
-              setExperience={props.setExperience}
-              experienceForm={props.experienceForm}
-              setExperienceForm={props.setExperienceForm}
+              items={props.experience}
+              setItems={props.setExperience}
+              setForm={props.setExperienceForm}
             />
           );
         })
