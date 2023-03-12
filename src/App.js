@@ -19,19 +19,40 @@ const App = () => {
   });
 
   const [education, setEducation] = useState([
-    {
-      schoolName: "High School",
-      degree: "STEM",
-      startDate: "2016-08-01",
-      endDate: "2020-05-21",
-      id: 0,
-    },
+    // {
+    //   schoolName: "High School",
+    //   degree: "STEM",
+    //   startDate: "2016-08-01",
+    //   endDate: "2020-05-21",
+    //   id: 0,
+    // },
     {
       schoolName: "College",
       degree: "Accounting",
-      startDate: "2020-08-05",
-      endDate: "2020-05-21",
-      id: 1,
+      startDate: "2020-08",
+      endDate: "2022-05",
+      id: 0,
+    },
+  ]);
+
+  //
+  const [experienceForm, setExperienceForm] = useState({
+    companyName: "",
+    position: "",
+    description: "",
+    startDate: "",
+    endDate: "",
+    id: "",
+  });
+
+  const [experience, setExperience] = useState([
+    {
+      companyName: "Company A",
+      position: "Web Developer",
+      description: "I do stuff...",
+      startDate: "2023-01",
+      endDate: "Present",
+      id: 0,
     },
   ]);
 
@@ -47,6 +68,10 @@ const App = () => {
         setEducation={setEducation}
         educationForm={educationForm}
         setEducationForm={setEducationForm}
+        experience={experience}
+        setExperience={setExperience}
+        experienceForm={experienceForm}
+        setExperienceForm={setExperienceForm}
       />
       <Preview
         name={name}

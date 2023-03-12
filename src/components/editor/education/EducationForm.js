@@ -18,6 +18,7 @@ const Education = (props) => {
       });
     }
   }
+
   function handleSubmit(e) {
     if (props.educationForm.id === "") {
       // save previous state and add new education object
@@ -86,7 +87,7 @@ const Education = (props) => {
       />
       <div className="date">
         <input
-          type="date"
+          type="month"
           onChange={(e) =>
             props.setEducationForm({
               ...props.educationForm,
@@ -97,7 +98,7 @@ const Education = (props) => {
           required
         />
         <input
-          type="date"
+          type="month"
           onChange={(e) =>
             props.setEducationForm({
               ...props.educationForm,
@@ -112,7 +113,7 @@ const Education = (props) => {
       </div>
       <button>
         {props.educationForm.id === "" ? "Add Education" : "Save Edit"}
-        {console.log(props.educationForm)}
+        {/* {console.log(props.educationForm)} */}
       </button>
     </form>
   );
