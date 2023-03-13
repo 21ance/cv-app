@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1279px) {
   body {
     .app {
       grid-template-columns: 1fr;
@@ -6,16 +6,57 @@
 
       header {
         height: 80px;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: space-between;
 
         &> span {
           font-size: 2rem;
           font-weight: bold;
           color: $header-font-color;
         }
+
+        .demo {
+          position: relative;
+          gap: 5px;
+          margin-right: 5px;
+
+          button {
+            padding: 5px 10px;
+          }
+        }
       }
 
       .editor-container, .preview-cv {
-        width: 97vw;
+        width: 95vw;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  body {
+    .app {
+      .editor-container, .preview-cv {
+        width: 100vw;
+        border-radius: 0;
+
+        .info {
+          .date-buttons{
+            grid-template-columns: repeat(3, fit-content);
+
+            .action-buttons{
+              justify-self: start;
+              grid-column: 1 / -1;
+              grid-row: 2 / 3;
+            }
+          }
+        }
+      }
+      .editor-container {
+        padding: 5px;
       }
     }
   }

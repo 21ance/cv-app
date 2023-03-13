@@ -1,25 +1,6 @@
-import { useState } from "react";
 import ActionButtons from "./ActionButtons";
 
 const Education = (props) => {
-  const [present, setPresent] = useState(false);
-
-  function handleCheckbox() {
-    if (!present) {
-      setPresent(true);
-      props.setEducationForm({
-        ...props.educationForm,
-        endDate: "Present",
-      });
-    } else {
-      setPresent(false);
-      props.setEducationForm({
-        ...props.educationForm,
-        endDate: "mm-dd-yyy",
-      });
-    }
-  }
-
   function handleSubmit(e) {
     if (props.educationForm.id === "") {
       // save previous state and add new education object
@@ -51,7 +32,6 @@ const Education = (props) => {
 
     resetForm();
     e.preventDefault();
-    // setPresent(false);
   }
 
   function resetForm() {

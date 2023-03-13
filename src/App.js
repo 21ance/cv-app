@@ -10,10 +10,6 @@ const App = () => {
     email: "",
     phone: "",
     desc: "",
-    // name: "Hello Doge",
-    // email: "helloworld@doge.com",
-    // phone: "022-0222-241412",
-    // desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut repudiandae cumque, facilis nihil, blanditiis numquam fuga fugiat veniam saepe mollitia aut voluptates magni eum autem consequuntur iste nobis officia enim?",
   });
 
   const [educationForm, setEducationForm] = useState({
@@ -25,24 +21,7 @@ const App = () => {
     id: "",
   });
 
-  const [education, setEducation] = useState([
-    // {
-    //   schoolName: "High School",
-    //   schoolLocation: "Some Rando Location",
-    //   degree: "STEM",
-    //   startDate: "2016-08-01",
-    //   endDate: "2020-05-21",
-    //   id: 0,
-    // },
-    // {
-    //   schoolName: "College",
-    //   schoolLocation: "Some Rando Location",
-    //   degree: "Accounting",
-    //   startDate: "2020-08",
-    //   endDate: "2022-05",
-    //   id: 1,
-    // },
-  ]);
+  const [education, setEducation] = useState([]);
 
   const [experienceForm, setExperienceForm] = useState({
     companyName: "",
@@ -53,39 +32,15 @@ const App = () => {
     id: "",
   });
 
-  const [experience, setExperience] = useState([
-    // {
-    //   companyName: "Company A",
-    //   position: "Web Developer",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus repudiandae quasi, necessitatibus libero incidunt dolor aut pariatur ipsa ut quia quibusdam iste corporis voluptates ducimus accusantium voluptatem? Placeat, sapiente.",
-    //   startDate: "June 2022",
-    //   endDate: "Present",
-    //   id: 0,
-    // },
-    // {
-    //   companyName: "Company A",
-    //   position: "Web Developer",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus repudiandae quasi, necessitatibus libero incidunt dolor aut pariatur ipsa ut quia quibusdam iste corporis voluptates ducimus accusantium voluptatem? Placeat, sapiente.",
-    //   startDate: "August 2017",
-    //   endDate: "July 2021",
-    //   id: 1,
-    // },
-    // {
-    //   companyName: "Company A",
-    //   position: "Web Developer",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus repudiandae quasi, necessitatibus libero incidunt dolor aut pariatur ipsa ut quia quibusdam iste corporis voluptates ducimus accusantium voluptatem? Placeat, sapiente.",
-    //   startDate: "August 2017",
-    //   endDate: "July 2021",
-    //   id: 2,
-    // },
-  ]);
+  const [experience, setExperience] = useState([]);
 
   return (
     <div className="app">
-      <Header />
+      <Header
+        setPersonalInfo={setPersonalInfo}
+        setEducation={setEducation}
+        setExperience={setExperience}
+      />
       <EditorContainer
         personalInfo={personalInfo}
         setPersonalInfo={setPersonalInfo}

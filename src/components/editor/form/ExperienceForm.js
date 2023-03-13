@@ -1,25 +1,6 @@
-import { useState } from "react";
 import ActionButtons from "./ActionButtons";
 
 const ExperienceForm = (props) => {
-  const [present, setPresent] = useState(false);
-
-  function handleCheckbox() {
-    if (!present) {
-      setPresent(true);
-      props.setExperienceForm({
-        ...props.experienceForm,
-        endDate: "Present",
-      });
-    } else {
-      setPresent(false);
-      props.setExperienceForm({
-        ...props.experienceForm,
-        endDate: "mm-dd-yyy",
-      });
-    }
-  }
-
   function handleSubmit(e) {
     if (props.experienceForm.id === "") {
       const newExperience = [
@@ -94,6 +75,7 @@ const ExperienceForm = (props) => {
         placeholder="Description"
         value={props.experienceForm.description}
         required
+        rows="4"
       />
       <div className="date-buttons">
         <input

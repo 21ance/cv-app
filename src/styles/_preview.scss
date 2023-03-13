@@ -4,10 +4,11 @@
   background-color: $container-color;
   box-shadow: 0 0 40px 1px rgb(0 0 0 / 50%);
   width: 45vw;
-  // min-height: 800px;
-  // height: fit-content;
+  min-height: 800px;
+  height: fit-content;
   justify-self: center;
   word-wrap: break-word;
+  padding-bottom: 50px;
 
   .preview-header{
     background-color: $header-color;
