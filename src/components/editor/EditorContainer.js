@@ -14,14 +14,14 @@ const EditorContainer = (props) => {
       />
       <FormSectionHeader title="Experience" />
       {props.experience
-        .map((edu, key) => {
+        .map((exp, key) => {
           return (
             <PreviewAction
-              key={edu.id}
-              name={edu.companyName}
-              startDate={edu.startDate}
-              endDate={edu.endDate}
-              id={edu.id}
+              key={exp.id}
+              name={exp.companyName}
+              startDate={exp.startDate}
+              endDate={exp.endDate}
+              id={exp.id}
               items={props.experience}
               setItems={props.setExperience}
               setForm={props.setExperienceForm}

@@ -1,0 +1,22 @@
+footer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $header-color;
+  height: 30px;
+
+  a {
+    display: flex;
+    gap: 2px;
+  }
+
+  ion-icon {
+    font-size: 1.1rem;
+  }
+
+  a, ion-icon {
+    color: $header-font-color;
+    text-decoration: none;
+  }
+}
