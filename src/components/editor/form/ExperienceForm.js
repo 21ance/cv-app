@@ -5,8 +5,6 @@ const ExperienceForm = (props) => {
   const [present, setPresent] = useState(false);
 
   function handleCheckbox() {
-    console.log(props.experienceForm);
-    console.log(props.experience);
     if (!present) {
       setPresent(true);
       props.setExperienceForm({
@@ -97,9 +95,9 @@ const ExperienceForm = (props) => {
         value={props.experienceForm.description}
         required
       />
-      <div className="date">
+      <div className="date-buttons">
         <input
-          type="month"
+          type="text"
           onChange={(e) =>
             props.setExperienceForm({
               ...props.experienceForm,
@@ -107,27 +105,28 @@ const ExperienceForm = (props) => {
             })
           }
           value={props.experienceForm.startDate}
+          placeholder="Start date"
           required
         />
+        <span>to</span>
         <input
-          type="month"
+          type="text"
           onChange={(e) =>
             props.setExperienceForm({
               ...props.experienceForm,
               endDate: e.target.value,
             })
           }
-          disabled={present}
           value={props.experienceForm.endDate}
+          placeholder="End date"
           required
         />
-        <input type="checkbox" onChange={(e) => handleCheckbox()} />
+        <ActionButtons
+          form={props.experienceForm}
+          setForm={props.setExperienceForm}
+          title="Add Experience"
+        />
       </div>
-      <ActionButtons
-        form={props.experienceForm}
-        setForm={props.setExperienceForm}
-        title="Add Experience"
-      />
     </form>
   );
 };

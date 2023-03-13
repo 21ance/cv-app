@@ -1,33 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Open+Sans&family=Raleway&family=Roboto&family=Sedgwick+Ave&family=Shadows+Into+Light&display=swap');
-@import "_variables";
-@import "_header";
-@import "_editor";
-@import "_preview";
-@import "_media-queries";
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
-  color: $main-font-color;
-  font-size: 100%;
-}
-
-body {
-  background-color: $body-color;
-}
-
-.app {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
-
-button {
-  border: 0
-}
-
-ion-icon {
-  pointer-events: none;
-}
+@import "./_variables";
+@import "./_header";
+@import "./_editor";
+@import "./_preview";
+@import "./_media-queries";
+@import "./_footer";
+@import "./common"

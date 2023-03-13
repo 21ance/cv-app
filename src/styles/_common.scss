@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: $main-font-color;
+  font-size: 100%;
+}
+
+body {
+  background-color: $body-color;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 50px;
+}
+
+button {
+  border: 0
+}
+
+ion-icon {
+  pointer-events: none;
+}

@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
   body {
     .app {
       grid-template-columns: 1fr;
@@ -17,13 +17,6 @@
       .editor-container, .preview-cv {
         width: 97vw;
       }
-      // .preview-cv{
-      //   .preview-section{
-      //     .preview-education{
-      //       grid-template-columns: 100px 1fr;
-      //     }
-      //   }
-      // }
     }
   }
 }

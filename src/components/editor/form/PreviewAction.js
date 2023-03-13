@@ -7,7 +7,6 @@ const PreviewAction = (props) => {
   function handleEdit(id) {
     const newForm = props.items.filter((obj) => obj.id === id).pop();
     props.setForm(newForm);
-    console.log(props.items);
   }
 
   return (
