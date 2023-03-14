@@ -111,7 +111,7 @@ const Education = (props) => {
         <ActionButtons
           form={props.educationForm}
           setForm={props.setEducationForm}
-          title="Add Experience"
+          title="Add Education"
         />
       </div>
     </form>

@@ -16,7 +16,7 @@ const Header = (props) => {
         degree: "Highschool",
         startDate: "August 2010",
         endDate: "May 2014",
-        id: 1,
+        id: 0,
       },
       {
         schoolName: "Curabitur elementum magna odio",
@@ -24,7 +24,7 @@ const Header = (props) => {
         degree: "College Degree",
         startDate: "August 2014",
         endDate: "June 2018",
-        id: 0,
+        id: 1,
       },
     ]);
 
@@ -36,7 +36,7 @@ const Header = (props) => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus repudiandae quasi, necessitatibus libero incidunt dolor aut pariatur ipsa ut quia quibusdam iste corporis voluptates ducimus accusantium voluptatem? Placeat, sapiente.",
         startDate: "October 2018",
         endDate: "October 2019",
-        id: 2,
+        id: 0,
       },
       {
         companyName: "Company B",
@@ -54,7 +54,7 @@ const Header = (props) => {
           "Lorem ipsum dolor sit amet consectetur adipisicing elit. A delectus repudiandae quasi, necessitatibus libero incidunt dolor aut pariatur ipsa ut quia quibusdam iste corporis voluptates ducimus accusantium voluptatem? Placeat, sapiente.",
         startDate: "January 2023",
         endDate: "Present",
-        id: 0,
+        id: 2,
       },
     ]);
   }

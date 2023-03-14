@@ -3,6 +3,7 @@ const ActionButtons = (props) => {
     if (props.form.hasOwnProperty("schoolName")) {
       props.setForm({
         schoolName: "",
+        schoolLocation: "",
         degree: "",
         startDate: "",
         endDate: "",
