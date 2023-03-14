@@ -15,7 +15,7 @@ This project is [part of The Odin Project](https://www.theodinproject.com/lesson
 - [Ionicons](https://ionic.io/ionicons)
 - [Google Fonts](https://fonts.google.com/)
 
-View Live in [Github Pages](https://21ance.github.io/Weather-App/)
+View Live in [Github Pages](https://21ance.github.io/cv-app)
 
 ---
 
